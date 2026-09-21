@@ -6,7 +6,10 @@ Site statique d'une page : HTML + CSS + JS, aucune dépendance, aucun tracker, a
 
 - `index.html` — la page entière (sections ancrées : Services, Réalisation, Projets, Stack, Méthode, Contact)
 - `assets/styles.css` — mise en forme ; thème sombre par défaut, thème clair disponible
+- `assets/fonts.css` + `assets/fonts/` — polices auto-hébergées (Fraunces, IBM Plex Sans, IBM Plex Mono, sous-ensembles latin)
 - `assets/main.js` — bascule de thème mémorisée, sommaire actif, apparitions douces
+
+Aucune requête vers un domaine tiers : ni Google Fonts, ni CDN, ni analytics.
 
 ## Mise en ligne (GitHub Pages)
 
