@@ -3,25 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fares Amiar — Data engineering, MLOps &amp; IA</title>
-<meta name="description" content="Portfolio de Fares Amiar : pipelines de données, MLOps, modèles ML et projets ouverts sur GitHub.">
+<title>Fares Amiar — Data engineer freelance : pipelines, entrepôts, modèles en production</title>
+<meta name="description" content="Freelance data engineering et MLOps : pipelines de données, entrepôts analytiques (dbt, BigQuery), mise en production de modèles ML. Missions au forfait ou en renfort d'équipe.">
+<meta name="author" content="Fares Amiar">
 <meta name="color-scheme" content="dark light">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151412'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' fill='%23e0a440' text-anchor='middle'%3EFA%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Fares Amiar — Data engineer freelance">
+<meta property="og:description" content="Pipelines, entrepôts, modèles en production. Missions data engineering et MLOps.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141210'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' fill='%23e8b061' text-anchor='middle'%3EFA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 
 <header class="top" id="haut">
-  <a class="top__brand" href="#haut">Fares&nbsp;Amiar</a>
+  <a class="top__brand" href="#haut">Fares&nbsp;Amiar<span class="top__brand-tag">freelance data</span></a>
   <nav class="top__nav" aria-label="Sections">
+    <a href="#services">Services</a>
+    <a href="#realisation">Réalisation</a>
     <a href="#projets">Projets</a>
-    <a href="#chantier">En chantier</a>
     <a href="#stack">Stack</a>
-    <a href="#archives">Archives</a>
+    <a href="#methode">Méthode</a>
+    <a href="#contact">Contact</a>
   </nav>
   <button class="theme" id="theme-toggle" type="button" aria-pressed="true" aria-label="Basculer entre thème sombre et clair">
     <span class="theme__dot" aria-hidden="true"></span><span class="theme__label">Sombre</span>
@@ -32,238 +38,302 @@
 
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__intro">
-      <p class="kicker">Data engineering · MLOps · IA</p>
-      <h1 id="hero-title">Fares Amiar</h1>
+      <p class="pill"><span class="pill__dot" aria-hidden="true"></span>Freelance · data engineering &amp; MLOps</p>
+      <h1 id="hero-title">Je mets vos données <em>au travail</em>.</h1>
       <p class="lede">
-        Je travaille la donnée de bout en bout&nbsp;: ingestion, transformation (dbt, Terraform,
-        Docker), modèles de machine learning et leur mise en production.
-        À côté de ça&nbsp;: du web, du Java et un peu de game dev.
-      </p>
-      <p class="meta">
-        <span>21 dépôts publics</span>
-        <span>Derniers commits&nbsp;: septembre 2026</span>
-        <span>Basé en France</span>
+        Pipelines, entrepôts analytiques, modèles en production&nbsp;: je construis la chaîne
+        complète, de l'ingestion jusqu'aux tableaux que vos équipes consultent le matin.
       </p>
       <p class="hero__links">
-        <a class="btn" href="#projets">Voir les projets</a>
-        <a class="btn btn--ghost" href="https://github.com/FaresAmiar" rel="me noopener">GitHub ↗</a>
+        <a class="btn" href="#contact">Parler de votre projet</a>
+        <a class="btn btn--ghost" href="#realisation">Voir une réalisation</a>
       </p>
+      <p class="hero__stack">dbt · BigQuery · Spark · Terraform · Docker · MLflow · Kestra</p>
     </div>
 
-    <aside class="hero__index" aria-label="Sommaire de la page">
-      <p class="hero__index-title">Sommaire</p>
-      <ol>
-        <li><a href="#projets"><span class="num">01</span> Projets sélectionnés</a></li>
-        <li><a href="#chantier"><span class="num">02</span> En chantier</a></li>
-        <li><a href="#stack"><span class="num">03</span> Stack</a></li>
-        <li><a href="#archives"><span class="num">04</span> Archives</a></li>
-        <li><a href="#contact"><span class="num">05</span> Contact</a></li>
-      </ol>
-      <p class="hero__note">Page statique. Pas de tracker, pas de cookie.</p>
-    </aside>
+    <figure class="diagram">
+      <svg viewBox="0 0 300 310" role="img" aria-label="Schéma d'une chaîne de données : sources, ingestion, entrepôt, modèles, restitution">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+          </marker>
+        </defs>
+        <g class="diagram__nodes">
+          <rect x="6" y="10" width="180" height="38" rx="3"></rect>
+          <text x="18" y="27">Sources</text>
+          <text class="diagram__sub" x="18" y="41">API · fichiers · base</text>
+
+          <rect x="6" y="72" width="180" height="38" rx="3"></rect>
+          <text x="18" y="89">Ingestion</text>
+          <text class="diagram__sub" x="18" y="103">Spark · orchestration</text>
+
+          <rect class="diagram__hl" x="6" y="134" width="180" height="38" rx="3"></rect>
+          <text x="18" y="151">Entrepôt &amp; modélisation</text>
+          <text class="diagram__sub" x="18" y="165">BigQuery · dbt · tests</text>
+
+          <rect x="6" y="196" width="180" height="38" rx="3"></rect>
+          <text x="18" y="213">Modèles</text>
+          <text class="diagram__sub" x="18" y="227">MLflow · API · suivi</text>
+
+          <rect x="6" y="258" width="180" height="38" rx="3"></rect>
+          <text x="18" y="275">Restitution</text>
+          <text class="diagram__sub" x="18" y="289">dashboards · exports</text>
+        </g>
+        <g class="diagram__links" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#arrow)">
+          <path d="M96 48 L96 70"></path>
+          <path d="M96 110 L96 132"></path>
+          <path d="M96 172 L96 194"></path>
+          <path d="M96 234 L96 256"></path>
+        </g>
+        <g class="diagram__note">
+          <path d="M186 153 L228 153" fill="none" stroke="currentColor" stroke-width="1"></path>
+          <text x="236" y="150">contrôles,</text>
+          <text x="236" y="163">latence, coûts</text>
+        </g>
+      </svg>
+      <figcaption>La chaîne type d'un projet data — chaque étage doit tenir tout seul.</figcaption>
+    </figure>
   </section>
 
-  <section class="section" id="projets" aria-labelledby="projets-title">
+  <section class="section" id="services" aria-labelledby="services-title">
     <div class="section__head">
-      <h2 id="projets-title"><span class="num">01</span> Projets sélectionnés</h2>
-      <p class="section__note">Dépôts publics, classés par activité récente.</p>
+      <h2 id="services-title"><span class="num">01</span>Services</h2>
+      <p class="section__note">Chaque mission démarre par un appel de cadrage pour vérifier le besoin — pas par un devis à l'aveugle.</p>
     </div>
 
     <ol class="rows">
       <li class="row">
         <span class="row__num">01</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/f1-data-engineering" rel="noopener">f1-data-engineering</a></h3>
-          <p>Pipeline de données sur la Formule 1&nbsp;: ingestion, entrepôt, modélisation dbt et infrastructure décrite en Terraform, le tout orchestré sous Docker.</p>
+          <h3>Pipeline de données de bout en bout</h3>
+          <p>Ingestion de vos sources, entrepôt, modélisation avec dbt, orchestration, tests de qualité et tableaux finaux. Vous récupérez des tables fiables et un pipeline qui tourne sans intervention manuelle.</p>
         </div>
-        <p class="row__stack"><span>dbt</span><span>Terraform</span><span>Docker</span></p>
-        <p class="row__year">2025</p>
+        <p class="row__tagline">Forfait projet</p>
       </li>
-
       <li class="row">
         <span class="row__num">02</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/data-engineering-zc" rel="noopener">data-engineering-zc</a></h3>
-          <p>Exercices et workshops de data engineering, dont un atelier dlt&nbsp;: ingestion de données de trajets new-yorkais et chargement en entrepôt.</p>
+          <h3>Mise en production d'un modèle de ML</h3>
+          <p>Entraînement reproductible, suivi des expériences, API de prédiction, conteneurisation, tests et supervision. Du notebook qui marche sur votre machine au service que vos utilisateurs peuvent appeler.</p>
         </div>
-        <p class="row__stack"><span>Python</span><span>dlt</span><span>Parquet</span></p>
-        <p class="row__year">2025</p>
+        <p class="row__tagline">Forfait projet</p>
       </li>
-
       <li class="row">
         <span class="row__num">03</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/Airbnb-Price-Prediction" rel="noopener">Airbnb-Price-Prediction</a></h3>
-          <p>Prédiction de prix de locations&nbsp;: entraînement, suivi d'expériences avec MLflow, API de service et conteneurisation complète.</p>
+          <h3>Reprise &amp; audit d'un pipeline existant</h3>
+          <p>Diagnostic de ce qui casse et de ce qui coûte cher, remise en état, documentation, infrastructure décrite en code pour que le prochain développeur ne reparte pas de zéro.</p>
         </div>
-        <p class="row__stack"><span>Python</span><span>MLflow</span><span>Docker</span></p>
-        <p class="row__year">2023</p>
+        <p class="row__tagline">Audit express</p>
       </li>
-
       <li class="row">
         <span class="row__num">04</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/imdb_sentiment_analysis_mlops" rel="noopener">imdb_sentiment_analysis_mlops</a></h3>
-          <p>Analyse de sentiment sur le jeu de données IMDb, montée comme un vrai projet MLOps&nbsp;: versionnement des données, orchestration, conteneurs et tests.</p>
+          <h3>Renfort data dans la durée</h3>
+          <p>Quelques jours par mois au sein de votre équipe&nbsp;: développement, revue de code, mise en place de bonnes pratiques d'ingénierie et de supervision.</p>
         </div>
-        <p class="row__stack"><span>MLOps</span><span>Prefect</span><span>DVC</span></p>
-        <p class="row__year">2023</p>
+        <p class="row__tagline">Jours par mois</p>
       </li>
+    </ol>
+  </section>
 
+  <section class="section" id="realisation" aria-labelledby="realisation-title">
+    <div class="section__head">
+      <h2 id="realisation-title"><span class="num">02</span>Réalisation</h2>
+      <p class="section__note">Projet public&nbsp;: code et démarche consultables.</p>
+    </div>
+
+    <article class="case">
+      <p class="case__eyebrow">Analytics · Formule 1</p>
+      <h3>De l'API Ergast à un dashboard d'analyse de courses</h3>
+      <p>
+        Les données de Formule 1 arrivent en JSON imbriqué, entassées saison après saison,
+        telles quelles impossibles à croiser&nbsp;: comparer un pilote à un autre, un circuit à un
+        autre, demandait de tout reprendre à la main.
+      </p>
+      <p>
+        La chaîne complète est en place&nbsp;: les données brutes sont ingérées par des jobs Spark,
+        déposées dans un stockage objet, chargées dans BigQuery puis modélisées avec dbt
+        (tables de staging, dimensions pilotes et constructeurs, table de faits des résultats).
+        L'ensemble tourne sous l'orchestrateur Kestra, l'infrastructure est décrite en Terraform,
+        et une vue consolidée alimente un dashboard Looker Studio pour analyser les saisons,
+        les pilotes et les circuits.
+      </p>
+      <ul class="case__facts">
+        <li><span>Sources</span> API Ergast (JSON imbriqué)</li>
+        <li><span>Traitement</span> jobs Spark → NDJSON → stockage objet</li>
+        <li><span>Entrepôt</span> BigQuery, modélisé avec dbt (staging, dimensions, faits, vues)</li>
+        <li><span>Orchestration</span> Kestra, workflows versionnés</li>
+        <li><span>Infrastructure</span> Terraform (bucket, dataset) et Docker</li>
+        <li><span>Restitution</span> dashboard Looker Studio</li>
+      </ul>
+      <p class="case__link">
+        <a class="link-more" href="https://github.com/FaresAmiar/f1-data-engineering" rel="noopener">Voir le dépôt f1-data-engineering ↗</a>
+      </p>
+    </article>
+  </section>
+
+  <section class="section" id="projets" aria-labelledby="projets-title">
+    <div class="section__head">
+      <h2 id="projets-title"><span class="num">03</span>Autres projets</h2>
+      <p class="section__note">Travaux publics, du pipeline au modèle servi.</p>
+    </div>
+
+    <ol class="rows rows--tight">
+      <li class="row">
+        <span class="row__num">01</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/imdb_sentiment_analysis_mlops" rel="noopener">Analyse de sentiment IMDb</a></h3>
+          <p>Pipeline MLOps complet&nbsp;: données et modèles versionnés (DVC, S3), suivi d'expériences sur un serveur MLflow distant, infrastructure AWS décrite en Terraform, déploiement déclenché à la pull request.</p>
+        </div>
+        <p class="row__tagline">Terraform · MLflow · DVC</p>
+      </li>
+      <li class="row">
+        <span class="row__num">02</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/Mlops_projectdtc" rel="noopener">Prédiction de salaires data</a></h3>
+          <p>Estimation de salaires à partir d'un jeu de données public&nbsp;: orchestration, suivi des expériences, déploiement puis supervision du modèle en production.</p>
+        </div>
+        <p class="row__tagline">MLflow · Prefect · monitoring</p>
+      </li>
+      <li class="row">
+        <span class="row__num">03</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/mlops-zoomcamp-2023-project" rel="noopener">Classifieur multi-classes servi en ligne</a></h3>
+          <p>Modèle de classification entraîné et servi selon les pratiques MLOps&nbsp;: entraînement reproductible, service d'inférence conteneurisé, tests automatisés.</p>
+        </div>
+        <p class="row__tagline">Prefect · Docker · tests</p>
+      </li>
+      <li class="row">
+        <span class="row__num">04</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/Airbnb-Price-Prediction" rel="noopener">Prédiction de prix de locations</a></h3>
+          <p>De l'exploration des données à l'API de prédiction&nbsp;: entraînement scikit-learn, suivi MLflow, conteneurisation et industrialisation du projet.</p>
+        </div>
+        <p class="row__tagline">scikit-learn · MLflow · Docker</p>
+      </li>
       <li class="row">
         <span class="row__num">05</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/Mlops_projectdtc" rel="noopener">Mlops_projectdtc</a></h3>
-          <p>Cycle MLOps complet&nbsp;: orchestration, expérimentations, déploiement et supervision du modèle en production.</p>
+          <h3><a href="https://github.com/FaresAmiar/IA" rel="noopener">Optimisation de tournées</a></h3>
+          <p>Résolution du problème du voyageur de commerce&nbsp;: heuristiques et métaheuristiques comparées sur des instances de tailles croissantes.</p>
         </div>
-        <p class="row__stack"><span>MLflow</span><span>Prefect</span><span>Monitoring</span></p>
-        <p class="row__year">2023</p>
+        <p class="row__tagline">Python · optimisation</p>
       </li>
-
       <li class="row">
         <span class="row__num">06</span>
         <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/IA" rel="noopener">IA</a></h3>
-          <p>Résolution du problème du voyageur de commerce&nbsp;: exploration d'heuristiques et de métaheuristiques en Python.</p>
+          <h3><a href="https://github.com/FaresAmiar/inference_sampling" rel="noopener">Échantillonnage par algorithmes d'inférence</a></h3>
+          <p>Implémentations et comparaisons d'algorithmes d'inférence probabiliste, en notebooks exécutables.</p>
         </div>
-        <p class="row__stack"><span>Python</span><span>Optimisation</span></p>
-        <p class="row__year">2022</p>
-      </li>
-
-      <li class="row">
-        <span class="row__num">07</span>
-        <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/inference_sampling" rel="noopener">inference_sampling</a></h3>
-          <p>Échantillonnage par algorithmes d'inférence&nbsp;: implémentations et comparaisons, en notebooks.</p>
-        </div>
-        <p class="row__stack"><span>Python</span><span>Probabilités</span></p>
-        <p class="row__year">2022</p>
-      </li>
-
-      <li class="row">
-        <span class="row__num">08</span>
-        <div class="row__body">
-          <h3><a href="https://github.com/FaresAmiar/marsupilami" rel="noopener">marsupilami</a></h3>
-          <p>Application web&nbsp;: front Angular, API Node et serveur Express, sur une base de code TypeScript.</p>
-        </div>
-        <p class="row__stack"><span>Angular</span><span>Node</span><span>TypeScript</span></p>
-        <p class="row__year">2021</p>
+        <p class="row__tagline">Python · probabilités</p>
       </li>
     </ol>
 
     <p class="section__foot">
-      <a class="link-more" href="https://github.com/FaresAmiar?tab=repositories" rel="noopener">Les 21 dépôts publics sur GitHub ↗</a>
+      <a class="link-more" href="https://github.com/FaresAmiar?tab=repositories" rel="noopener">Tous les dépôts publics ↗</a>
     </p>
-  </section>
-
-  <section class="section" id="chantier" aria-labelledby="chantier-title">
-    <div class="section__head">
-      <h2 id="chantier-title"><span class="num">02</span> En chantier</h2>
-      <p class="section__note">Dépôts privés — sur demande.</p>
-    </div>
-
-    <ul class="cards">
-      <li class="card">
-        <p class="card__tag">Python · FastAPI · Kraken</p>
-        <h3>ai-trading</h3>
-        <p>Plateforme de trading algorithmique crypto&nbsp;: moteur de backtest, API REST, orchestration multi-agents et migrations de base.</p>
-        <p class="card__state">Privé</p>
-      </li>
-      <li class="card">
-        <p class="card__tag">Flutter · Supabase</p>
-        <h3>health-track</h3>
-        <p>Application mobile de suivi sportif et nutritionnel, pensée offline-first, avec programmes partagés en groupe.</p>
-        <p class="card__state">Privé</p>
-      </li>
-      <li class="card">
-        <p class="card__tag">Godot · GDScript</p>
-        <h3>dbz-aots</h3>
-        <p>Jeu de combat 2D en arène, avec système de combos et d'attaques à distance.</p>
-        <p class="card__state">Privé</p>
-      </li>
-      <li class="card">
-        <p class="card__tag">Rainmeter · XML</p>
-        <h3>fmc2015fm</h3>
-        <p>Skin de bureau Radio&nbsp;: interface, panneaux et ressources graphiques.</p>
-        <p class="card__state">Privé</p>
-      </li>
-    </ul>
   </section>
 
   <section class="section" id="stack" aria-labelledby="stack-title">
     <div class="section__head">
-      <h2 id="stack-title"><span class="num">03</span> Stack</h2>
-      <p class="section__note">Ce que j'utilise dans ces dépôts.</p>
+      <h2 id="stack-title"><span class="num">04</span>Stack &amp; outils</h2>
+      <p class="section__note">Ce que j'utilise au quotidien — et que je peux vous laisser en main.</p>
     </div>
 
     <div class="stack">
       <div class="stack__col">
-        <p class="stack__label">Data &amp; pipelines</p>
+        <p class="stack__label">Ingestion &amp; traitement</p>
         <ul>
-          <li>Python</li><li>SQL</li><li>dbt</li><li>dlt</li><li>Docker</li><li>Terraform</li>
+          <li>Python</li><li>SQL</li><li>Spark</li><li>dlt</li><li>API REST</li>
         </ul>
       </div>
       <div class="stack__col">
-        <p class="stack__label">ML &amp; MLOps</p>
+        <p class="stack__label">Entrepôt &amp; modélisation</p>
         <ul>
-          <li>scikit-learn</li><li>MLflow</li><li>Prefect</li><li>DVC</li><li>Supervision &amp; tests</li>
+          <li>BigQuery</li><li>PostgreSQL</li><li>dbt</li><li>Tests de qualité</li>
         </ul>
       </div>
       <div class="stack__col">
-        <p class="stack__label">Backend &amp; web</p>
+        <p class="stack__label">ML &amp; mise en production</p>
         <ul>
-          <li>FastAPI</li><li>Node / Express</li><li>Angular</li><li>PHP</li><li>Java (JEE)</li>
+          <li>scikit-learn</li><li>MLflow</li><li>FastAPI</li><li>Prefect</li><li>DVC</li>
         </ul>
       </div>
       <div class="stack__col">
-        <p class="stack__label">Autres</p>
+        <p class="stack__label">Infra &amp; industrialisation</p>
         <ul>
-          <li>Flutter</li><li>Godot</li><li>C / C++</li><li>Git &amp; GitHub Actions</li>
+          <li>Docker</li><li>Terraform</li><li>Kestra</li><li>Git &amp; GitHub Actions</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="archives" aria-labelledby="archives-title">
+  <section class="section" id="methode" aria-labelledby="methode-title">
     <div class="section__head">
-      <h2 id="archives-title"><span class="num">04</span> Archives</h2>
-      <p class="section__note">Projets plus anciens, conservés tels quels.</p>
+      <h2 id="methode-title"><span class="num">05</span>Comment on travaille</h2>
+      <p class="section__note">Quatre étapes, dans cet ordre, pour que rien ne reste flou.</p>
     </div>
 
-    <ul class="archive">
-      <li><a href="https://github.com/FaresAmiar/Infinity" rel="noopener">Infinity</a><span>Java · 2022</span></li>
-      <li><a href="https://github.com/FaresAmiar/ML" rel="noopener">ML</a><span>Notebook · 2022</span></li>
-      <li><a href="https://github.com/FaresAmiar/PWEB" rel="noopener">PWEB</a><span>Application QCM · 2021</span></li>
-      <li><a href="https://github.com/FaresAmiar/RapMap" rel="noopener">RapMap</a><span>PHP · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/RapGuessR" rel="noopener">RapGuessR</a><span>Java · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/Projet-J2E" rel="noopener">Projet-J2E</a><span>Bibliothèque JEE · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/SDA" rel="noopener">SDA</a><span>Taquin cylindrique · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/CourseSkieurs" rel="noopener">CourseSkieurs</a><span>Course de skieurs · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/Algorithmique-Avancee" rel="noopener">Algorithmique-Avancee</a><span>Sac à dos · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/TaquinCylindriqueGUI" rel="noopener">TaquinCylindriqueGUI</a><span>Interface graphique · 2020</span></li>
-      <li><a href="https://github.com/FaresAmiar/agile" rel="noopener">agile</a><span>Python · 2023</span></li>
-      <li><a href="https://github.com/FaresAmiar/mlops-zoomcamp-2023-project" rel="noopener">mlops-zoomcamp-2023-project</a><span>MLOps · 2023</span></li>
-    </ul>
+    <ol class="steps">
+      <li>
+        <p class="steps__num">01</p>
+        <h3>Cadrage</h3>
+        <p>Un appel pour comprendre vos données, vos contraintes et le résultat attendu. J'en ressors une proposition écrite, un périmètre et une estimation.</p>
+      </li>
+      <li>
+        <p class="steps__num">02</p>
+        <h3>Prototype sur vos vraies données</h3>
+        <p>Une première version fonctionnelle, sur un échantillon réel plutôt qu'un jeu de démonstration. C'est là qu'on découvre les vrais problèmes.</p>
+      </li>
+      <li>
+        <p class="steps__num">03</p>
+        <h3>Industrialisation</h3>
+        <p>Orchestration, tests, infrastructure décrite en code, suivi et alertes, documentation. Ce qui tourne doit pouvoir être réparé sans moi.</p>
+      </li>
+      <li>
+        <p class="steps__num">04</p>
+        <h3>Passation</h3>
+        <p>Session de passation avec votre équipe, dépôts rangés, décisions écrites. Vous restez propriétaires et autonomes sur tout ce qui est livré.</p>
+      </li>
+    </ol>
   </section>
 
   <section class="section section--contact" id="contact" aria-labelledby="contact-title">
     <div class="section__head">
-      <h2 id="contact-title"><span class="num">05</span> Contact</h2>
+      <h2 id="contact-title"><span class="num">06</span>Contact</h2>
     </div>
-    <p class="contact__lede">
-      Le plus simple&nbsp;: GitHub. Issues, discussions ou mail — tout passe par là.
-    </p>
-    <p class="hero__links">
-      <a class="btn" href="https://github.com/FaresAmiar" rel="me noopener">github.com/FaresAmiar ↗</a>
-      <a class="btn btn--ghost" href="https://github.com/FaresAmiar?tab=repositories" rel="noopener">Dépôts ↗</a>
-    </p>
+    <div class="contact">
+      <p class="contact__lede">
+        Un pipeline à débloquer, un modèle qui doit partir en production, ou simplement une
+        question sur la faisabilité d'un projet&nbsp;? Écrivez-moi&nbsp;: je réponds, et je vous dis
+        franchement si je suis la bonne personne.
+      </p>
+      <p class="contact__about">
+        Fares Amiar, data engineering et MLOps. Mes projets publics portent sur l'ingestion,
+        la modélisation d'entrepôts analytiques et la mise en production de modèles.
+      </p>
+      <p class="hero__links">
+        <a class="btn" href="https://github.com/FaresAmiar" rel="me noopener">Écrire sur GitHub ↗</a>
+        <a class="btn btn--ghost" href="https://github.com/FaresAmiar/f1-data-engineering" rel="noopener">La réalisation F1 ↗</a>
+      </p>
+      <!-- À COMPLÉTER : votre adresse e-mail, puis décommenter ce bloc.
+      <p class="hero__links">
+        <a class="btn" href="mailto:adresse@exemple.fr">Écrire un e-mail</a>
+      </p>
+      -->
+    </div>
   </section>
 
 </main>
 
 <footer class="foot">
-  <p>Fares Amiar — page statique en HTML/CSS, publiée depuis GitHub.</p>
-  <p class="foot__meta">Contenu mis à jour en septembre 2026 · <a href="#haut">Haut de page</a></p>
+  <p class="foot__brand">Fares Amiar — data engineering &amp; MLOps, freelance.</p>
+  <p class="foot__meta">
+    <a href="https://github.com/FaresAmiar" rel="me noopener">github.com/FaresAmiar</a>
+    <span>Page statique : pas de tracker, pas de cookie.</span>
+    <span><a href="#haut">Haut de page</a></span>
+  </p>
 </footer>
 
 <script src="assets/main.js" defer></script>
