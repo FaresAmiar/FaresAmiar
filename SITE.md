@@ -30,6 +30,30 @@ Pour une URL à la racine (`https://faresamiar.github.io/`), créer un dépôt n
 - **Tarifs / disponibilité** : volontairement absents. Les formats de mission
   (« Forfait projet », « Audit express », « Jours par mois ») sont indicatifs.
 
+## Référencement (SEO)
+
+Déjà en place dans la page :
+
+- `title` et `description` calibrés pour la longueur affichée par Google
+- URL canonique, `robots` en index/follow, `lang="fr"`
+- Open Graph + Twitter Card complets, avec image de partage `assets/og-image.png` (1200×630)
+- Données structurées JSON-LD : `Person`, `WebSite`, `ProfilePage` et 3 `Service`
+- `robots.txt` et `sitemap.xml` à la racine du site
+- `404.html` servi par GitHub Pages, en `noindex`
+- Favicons réels (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) — un favicon en
+  `data:` n'est pas exploité par le robot de Google
+- Polices auto-hébergées et préchargées : pas de requête tierce, affichage rapide
+
+Étapes qui restent à faire côté Google (nécessitent le compte de Fares) :
+
+1. Search Console → Ajouter une propriété → *Préfixe d'URL* :
+   `https://faresamiar.github.io/FaresAmiar/`
+2. Vérification par fichier HTML ou balise `<meta>` (l'emplacement de la balise est
+   commenté dans `index.html`) → donner le fichier ou la balise pour qu'elle soit poussée
+3. Soumettre `sitemap.xml` dans l'onglet Sitemaps
+4. Ajouter l'URL du site dans *Settings → Public profile → Website* de GitHub (lien
+   depuis un domaine très autoritaire) et dans les profils Malt / LinkedIn / Free-Work
+
 ## Modifier
 
 Tout est en HTML lisible : un `<li class="row">` par service ou projet, le schéma

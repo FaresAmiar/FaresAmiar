@@ -1,0 +1,5 @@
+# robots.txt — https://faresamiar.github.io/FaresAmiar/
+User-agent: *
+Allow: /
+
+Sitemap: https://faresamiar.github.io/FaresAmiar/sitemap.xml
