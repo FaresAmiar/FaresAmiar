@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fares Amiar — Data engineering, MLOps &amp; IA</title>
+<meta name="description" content="Portfolio de Fares Amiar : pipelines de données, MLOps, modèles ML et projets ouverts sur GitHub.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151412'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' fill='%23e0a440' text-anchor='middle'%3EFA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="haut">
+  <a class="top__brand" href="#haut">Fares&nbsp;Amiar</a>
+  <nav class="top__nav" aria-label="Sections">
+    <a href="#projets">Projets</a>
+    <a href="#chantier">En chantier</a>
+    <a href="#stack">Stack</a>
+    <a href="#archives">Archives</a>
+  </nav>
+  <button class="theme" id="theme-toggle" type="button" aria-pressed="true" aria-label="Basculer entre thème sombre et clair">
+    <span class="theme__dot" aria-hidden="true"></span><span class="theme__label">Sombre</span>
+  </button>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__intro">
+      <p class="kicker">Data engineering · MLOps · IA</p>
+      <h1 id="hero-title">Fares Amiar</h1>
+      <p class="lede">
+        Je travaille la donnée de bout en bout&nbsp;: ingestion, transformation (dbt, Terraform,
+        Docker), modèles de machine learning et leur mise en production.
+        À côté de ça&nbsp;: du web, du Java et un peu de game dev.
+      </p>
+      <p class="meta">
+        <span>21 dépôts publics</span>
+        <span>Derniers commits&nbsp;: septembre 2026</span>
+        <span>Basé en France</span>
+      </p>
+      <p class="hero__links">
+        <a class="btn" href="#projets">Voir les projets</a>
+        <a class="btn btn--ghost" href="https://github.com/FaresAmiar" rel="me noopener">GitHub ↗</a>
+      </p>
+    </div>
+
+    <aside class="hero__index" aria-label="Sommaire de la page">
+      <p class="hero__index-title">Sommaire</p>
+      <ol>
+        <li><a href="#projets"><span class="num">01</span> Projets sélectionnés</a></li>
+        <li><a href="#chantier"><span class="num">02</span> En chantier</a></li>
+        <li><a href="#stack"><span class="num">03</span> Stack</a></li>
+        <li><a href="#archives"><span class="num">04</span> Archives</a></li>
+        <li><a href="#contact"><span class="num">05</span> Contact</a></li>
+      </ol>
+      <p class="hero__note">Page statique. Pas de tracker, pas de cookie.</p>
+    </aside>
+  </section>
+
+  <section class="section" id="projets" aria-labelledby="projets-title">
+    <div class="section__head">
+      <h2 id="projets-title"><span class="num">01</span> Projets sélectionnés</h2>
+      <p class="section__note">Dépôts publics, classés par activité récente.</p>
+    </div>
+
+    <ol class="rows">
+      <li class="row">
+        <span class="row__num">01</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/f1-data-engineering" rel="noopener">f1-data-engineering</a></h3>
+          <p>Pipeline de données sur la Formule 1&nbsp;: ingestion, entrepôt, modélisation dbt et infrastructure décrite en Terraform, le tout orchestré sous Docker.</p>
+        </div>
+        <p class="row__stack"><span>dbt</span><span>Terraform</span><span>Docker</span></p>
+        <p class="row__year">2025</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">02</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/data-engineering-zc" rel="noopener">data-engineering-zc</a></h3>
+          <p>Exercices et workshops de data engineering, dont un atelier dlt&nbsp;: ingestion de données de trajets new-yorkais et chargement en entrepôt.</p>
+        </div>
+        <p class="row__stack"><span>Python</span><span>dlt</span><span>Parquet</span></p>
+        <p class="row__year">2025</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">03</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/Airbnb-Price-Prediction" rel="noopener">Airbnb-Price-Prediction</a></h3>
+          <p>Prédiction de prix de locations&nbsp;: entraînement, suivi d'expériences avec MLflow, API de service et conteneurisation complète.</p>
+        </div>
+        <p class="row__stack"><span>Python</span><span>MLflow</span><span>Docker</span></p>
+        <p class="row__year">2023</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">04</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/imdb_sentiment_analysis_mlops" rel="noopener">imdb_sentiment_analysis_mlops</a></h3>
+          <p>Analyse de sentiment sur le jeu de données IMDb, montée comme un vrai projet MLOps&nbsp;: versionnement des données, orchestration, conteneurs et tests.</p>
+        </div>
+        <p class="row__stack"><span>MLOps</span><span>Prefect</span><span>DVC</span></p>
+        <p class="row__year">2023</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">05</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/Mlops_projectdtc" rel="noopener">Mlops_projectdtc</a></h3>
+          <p>Cycle MLOps complet&nbsp;: orchestration, expérimentations, déploiement et supervision du modèle en production.</p>
+        </div>
+        <p class="row__stack"><span>MLflow</span><span>Prefect</span><span>Monitoring</span></p>
+        <p class="row__year">2023</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">06</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/IA" rel="noopener">IA</a></h3>
+          <p>Résolution du problème du voyageur de commerce&nbsp;: exploration d'heuristiques et de métaheuristiques en Python.</p>
+        </div>
+        <p class="row__stack"><span>Python</span><span>Optimisation</span></p>
+        <p class="row__year">2022</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">07</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/inference_sampling" rel="noopener">inference_sampling</a></h3>
+          <p>Échantillonnage par algorithmes d'inférence&nbsp;: implémentations et comparaisons, en notebooks.</p>
+        </div>
+        <p class="row__stack"><span>Python</span><span>Probabilités</span></p>
+        <p class="row__year">2022</p>
+      </li>
+
+      <li class="row">
+        <span class="row__num">08</span>
+        <div class="row__body">
+          <h3><a href="https://github.com/FaresAmiar/marsupilami" rel="noopener">marsupilami</a></h3>
+          <p>Application web&nbsp;: front Angular, API Node et serveur Express, sur une base de code TypeScript.</p>
+        </div>
+        <p class="row__stack"><span>Angular</span><span>Node</span><span>TypeScript</span></p>
+        <p class="row__year">2021</p>
+      </li>
+    </ol>
+
+    <p class="section__foot">
+      <a class="link-more" href="https://github.com/FaresAmiar?tab=repositories" rel="noopener">Les 21 dépôts publics sur GitHub ↗</a>
+    </p>
+  </section>
+
+  <section class="section" id="chantier" aria-labelledby="chantier-title">
+    <div class="section__head">
+      <h2 id="chantier-title"><span class="num">02</span> En chantier</h2>
+      <p class="section__note">Dépôts privés — sur demande.</p>
+    </div>
+
+    <ul class="cards">
+      <li class="card">
+        <p class="card__tag">Python · FastAPI · Kraken</p>
+        <h3>ai-trading</h3>
+        <p>Plateforme de trading algorithmique crypto&nbsp;: moteur de backtest, API REST, orchestration multi-agents et migrations de base.</p>
+        <p class="card__state">Privé</p>
+      </li>
+      <li class="card">
+        <p class="card__tag">Flutter · Supabase</p>
+        <h3>health-track</h3>
+        <p>Application mobile de suivi sportif et nutritionnel, pensée offline-first, avec programmes partagés en groupe.</p>
+        <p class="card__state">Privé</p>
+      </li>
+      <li class="card">
+        <p class="card__tag">Godot · GDScript</p>
+        <h3>dbz-aots</h3>
+        <p>Jeu de combat 2D en arène, avec système de combos et d'attaques à distance.</p>
+        <p class="card__state">Privé</p>
+      </li>
+      <li class="card">
+        <p class="card__tag">Rainmeter · XML</p>
+        <h3>fmc2015fm</h3>
+        <p>Skin de bureau Radio&nbsp;: interface, panneaux et ressources graphiques.</p>
+        <p class="card__state">Privé</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" id="stack" aria-labelledby="stack-title">
+    <div class="section__head">
+      <h2 id="stack-title"><span class="num">03</span> Stack</h2>
+      <p class="section__note">Ce que j'utilise dans ces dépôts.</p>
+    </div>
+
+    <div class="stack">
+      <div class="stack__col">
+        <p class="stack__label">Data &amp; pipelines</p>
+        <ul>
+          <li>Python</li><li>SQL</li><li>dbt</li><li>dlt</li><li>Docker</li><li>Terraform</li>
+        </ul>
+      </div>
+      <div class="stack__col">
+        <p class="stack__label">ML &amp; MLOps</p>
+        <ul>
+          <li>scikit-learn</li><li>MLflow</li><li>Prefect</li><li>DVC</li><li>Supervision &amp; tests</li>
+        </ul>
+      </div>
+      <div class="stack__col">
+        <p class="stack__label">Backend &amp; web</p>
+        <ul>
+          <li>FastAPI</li><li>Node / Express</li><li>Angular</li><li>PHP</li><li>Java (JEE)</li>
+        </ul>
+      </div>
+      <div class="stack__col">
+        <p class="stack__label">Autres</p>
+        <ul>
+          <li>Flutter</li><li>Godot</li><li>C / C++</li><li>Git &amp; GitHub Actions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="archives" aria-labelledby="archives-title">
+    <div class="section__head">
+      <h2 id="archives-title"><span class="num">04</span> Archives</h2>
+      <p class="section__note">Projets plus anciens, conservés tels quels.</p>
+    </div>
+
+    <ul class="archive">
+      <li><a href="https://github.com/FaresAmiar/Infinity" rel="noopener">Infinity</a><span>Java · 2022</span></li>
+      <li><a href="https://github.com/FaresAmiar/ML" rel="noopener">ML</a><span>Notebook · 2022</span></li>
+      <li><a href="https://github.com/FaresAmiar/PWEB" rel="noopener">PWEB</a><span>Application QCM · 2021</span></li>
+      <li><a href="https://github.com/FaresAmiar/RapMap" rel="noopener">RapMap</a><span>PHP · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/RapGuessR" rel="noopener">RapGuessR</a><span>Java · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/Projet-J2E" rel="noopener">Projet-J2E</a><span>Bibliothèque JEE · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/SDA" rel="noopener">SDA</a><span>Taquin cylindrique · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/CourseSkieurs" rel="noopener">CourseSkieurs</a><span>Course de skieurs · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/Algorithmique-Avancee" rel="noopener">Algorithmique-Avancee</a><span>Sac à dos · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/TaquinCylindriqueGUI" rel="noopener">TaquinCylindriqueGUI</a><span>Interface graphique · 2020</span></li>
+      <li><a href="https://github.com/FaresAmiar/agile" rel="noopener">agile</a><span>Python · 2023</span></li>
+      <li><a href="https://github.com/FaresAmiar/mlops-zoomcamp-2023-project" rel="noopener">mlops-zoomcamp-2023-project</a><span>MLOps · 2023</span></li>
+    </ul>
+  </section>
+
+  <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+    <div class="section__head">
+      <h2 id="contact-title"><span class="num">05</span> Contact</h2>
+    </div>
+    <p class="contact__lede">
+      Le plus simple&nbsp;: GitHub. Issues, discussions ou mail — tout passe par là.
+    </p>
+    <p class="hero__links">
+      <a class="btn" href="https://github.com/FaresAmiar" rel="me noopener">github.com/FaresAmiar ↗</a>
+      <a class="btn btn--ghost" href="https://github.com/FaresAmiar?tab=repositories" rel="noopener">Dépôts ↗</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Fares Amiar — page statique en HTML/CSS, publiée depuis GitHub.</p>
+  <p class="foot__meta">Contenu mis à jour en septembre 2026 · <a href="#haut">Haut de page</a></p>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
